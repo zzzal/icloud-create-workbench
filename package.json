@@ -1,0 +1,22 @@
+{
+  "name": "icloud-create-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "用 JavaScript 重写的 iCloud 隐藏邮件地址工作台",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "init-env": "node scripts/init-env.js",
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "docker": "docker compose up --build",
+    "test": "node --test --disable-warning=ExperimentalWarning"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "htmlparser2": "^10.1.0",
+    "imapflow": "^2.12.1",
+    "mailparser": "^3.14.5"
+  }
+}
